@@ -92,7 +92,6 @@ def load_cifar10(is_train, augs, batch_size, root="~/Datasets/CIFAR"):
     return DataLoader(dataset, batch_size=batch_size, shuffle=is_train, num_workers=num_workers)
 
 # 使用GPU训练模型
-# 本函数已保存在d2lzh_pytorch包中方便以后使用
 def train(train_iter, test_iter, net, loss, optimizer, device, num_epochs):
     net = net.to(device)
     print("training on ", device)
