@@ -36,3 +36,15 @@ print("mean is :", mean, mean.shape)
 # mean = x.mean(dim=0, keepdim=True).mean(dim=2, keepdim=True).mean(dim=3, keepdim=True)
 # print(mean)
 # print(mean.shape)
+
+import numpy as np
+# 坐标向量
+a = np.array([1,2,3])
+# 坐标向量
+b = np.array([7,8])
+# 从坐标向量中返回坐标矩阵
+# 返回list,有两个元素,第一个元素是X轴的取值,第二个元素是Y轴的取值
+x, y= np.meshgrid(a,b)
+print('x is :', x)
+print('y is :', y)
+print('stack :', np.stack((x, y), axis=2))
